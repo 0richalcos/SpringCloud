@@ -11,6 +11,8 @@
     <modules>
         <module>springcloud_eureka_server</module>
         <module>springcloud_eureka_client</module>
+        <module>springcloud_consul_client</module>
+        <module>products</module>
     </modules>
 
     <!--继承SpringBoot的父项目-->
