@@ -13,9 +13,12 @@ public class OrderController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderController.class);
 
+    @Value("${server.port}")
+    private String port;
+
     @GetMapping
     public String demo() {
-        LOGGER.info("order demo...");
-        return "order demo OK!!";
+        LOGGER.info("order被调用，服务端口为：{}", port);
+        return "order demo OK!!,服务端口为：" + port;
     }
 }

@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: order
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+
+---
+spring:
+  profiles: order9998
+server:
+  port: 9998
+
+---
+spring:
+  profiles: order9997
+server:
+  port: 9997
+
+---
+spring:
+  profiles: order9996
+server:
+  port: 9996
