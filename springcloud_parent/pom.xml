@@ -14,6 +14,8 @@
         <module>springcloud_consul_client</module>
         <module>springcloud_user</module>
         <module>springcloud_order</module>
+        <module>springcloud_category</module>
+        <module>springcloud_product</module>
     </modules>
 
     <!--继承SpringBoot的父项目-->

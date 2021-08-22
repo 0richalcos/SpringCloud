@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: product
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+
+---
+spring:
+  profiles: product9994
+server:
+  port: 9994
+
+---
+spring:
+  profiles: product9993
+server:
+  port: 9993
