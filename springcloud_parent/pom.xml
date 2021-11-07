@@ -16,6 +16,8 @@
         <module>springcloud_order</module>
         <module>springcloud_category</module>
         <module>springcloud_product</module>
+        <module>springcloud_hystrix</module>
+        <module>springcloud_openfeign_hystrix</module>
     </modules>
 
     <!--继承SpringBoot的父项目-->
