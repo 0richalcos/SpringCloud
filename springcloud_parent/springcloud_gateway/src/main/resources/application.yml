@@ -1,0 +1,20 @@
+server:
+  port: 8989
+spring:
+  application:
+    name: gateway
+  cloud:
+    consul:
+      port: 8500
+      host: localhost
+    gateway:
+      routes:
+        - id: order_route               # 指定路由唯一标识
+          uri: http://localhost:9996/   # 指定路由服务的地址
+          predicates:
+            - Path=/order/**            # 指定路由规则
+
+        - id: product_route
+          uri: http://localhost:9993/
+          predicates:
+            - Path=/product/**

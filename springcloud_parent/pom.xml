@@ -18,6 +18,7 @@
         <module>springcloud_product</module>
         <module>springcloud_hystrix</module>
         <module>springcloud_openfeign_hystrix</module>
+        <module>springcloud_gateway</module>
     </modules>
 
     <!--继承SpringBoot的父项目-->
