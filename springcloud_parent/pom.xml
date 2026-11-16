@@ -20,6 +20,7 @@
         <module>springcloud_openfeign_hystrix</module>
         <module>springcloud_gateway</module>
         <module>springcloud_config_server</module>
+        <module>springcloud_config_client</module>
     </modules>
 
     <!--继承SpringBoot的父项目-->
