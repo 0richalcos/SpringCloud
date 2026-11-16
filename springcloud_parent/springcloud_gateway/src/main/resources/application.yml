@@ -1,5 +1,10 @@
 server:
   port: 8989
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"   #开启所有web端点暴露
 spring:
   application:
     name: gateway
@@ -10,11 +15,19 @@ spring:
     gateway:
       routes:
         - id: order_route               # 指定路由唯一标识
-          uri: http://localhost:9996/   # 指定路由服务的地址
+          # uri: http://localhost:9996/   # 指定路由服务的地址
+          uri: lb://order/              # lb代表转发后台服务使用负载均衡，order 代表服务注册中心上的服务名
           predicates:
             - Path=/order/**            # 指定路由规则
+            - Cookie=username,[A-Za-z0-9]+
+            - Header=X-Request-Id, \d+
+          filters:
+            - CheckAuth
 
         - id: product_route
-          uri: http://localhost:9993/
+          uri: lb://product/
           predicates:
             - Path=/product/**
+      discovery:
+        locator:
+          enabled: true               #开启根据服务名动态获取路由

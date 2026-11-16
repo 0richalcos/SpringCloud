@@ -3,14 +3,14 @@ package com.orichalcos;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
-/**
- * @author Orichalcos
- */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class Product9994Application {
+//开启OpenFeign客户端调用
+@EnableFeignClients
+public class CategoryApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Product9994Application.class, args);
+        SpringApplication.run(CategoryApplication.class, args);
     }
 }

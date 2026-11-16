@@ -1,6 +1,7 @@
 spring:
   application:
-    name: eruekaserver
+    name: eureka-server
+
 eureka:
   client:
     register-with-eureka: false
@@ -15,8 +16,6 @@ spring:
 server:
   port: 8761
 eureka:
-  instance:
-    hostname: peer1
   client:
     service-url:
       defaultZone: http://peer2:8762/eureka,http://peer3:8763/eureka
@@ -27,8 +26,6 @@ spring:
 server:
   port: 8762
 eureka:
-  instance:
-    hostname: peer2
   client:
     service-url:
       defaultZone: http://peer1:8761/eureka,http://peer3:8763/eureka
@@ -39,8 +36,6 @@ spring:
 server:
   port: 8763
 eureka:
-  instance:
-    hostname: peer3
   client:
     service-url:
       defaultZone: http://peer1:8761/eureka,http://peer2:8762/eureka

@@ -8,18 +8,18 @@ spring:
 
 ---
 spring:
-  profiles: order9998
+  profiles: order1
 server:
-  port: 9998
+  port: 9996
 
 ---
 spring:
-  profiles: order9997
+  profiles: order2
 server:
   port: 9997
 
 ---
 spring:
-  profiles: order9996
+  profiles: order3
 server:
-  port: 9996
+  port: 9998

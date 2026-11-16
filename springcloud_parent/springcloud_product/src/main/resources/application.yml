@@ -8,12 +8,12 @@ spring:
 
 ---
 spring:
-  profiles: product9994
+  profiles: product1
 server:
-  port: 9994
+  port: 9993
 
 ---
 spring:
-  profiles: product9993
+  profiles: product2
 server:
-  port: 9993
+  port: 9994

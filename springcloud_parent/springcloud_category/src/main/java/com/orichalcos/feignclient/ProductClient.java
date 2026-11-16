@@ -4,7 +4,7 @@ import com.orichalcos.entity.Product;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
-//调用商品服务接口 value：用来书写被调用服务的服务Id
+//调用商品服务接口 value：用来书写被调用服务的名称
 @FeignClient("product")
 public interface ProductClient {
 

@@ -3,14 +3,14 @@ package com.orichalcos;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-//开启Hystrix服务熔断
-@EnableHystrix
-public class Hystrix8990Application {
+//开启OpenFeign调用
+@EnableFeignClients
+public class OpenfeignHystrixApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Hystrix8990Application.class, args);
+        SpringApplication.run(OpenfeignHystrixApplication.class, args);
     }
 }
