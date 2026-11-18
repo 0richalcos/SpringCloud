@@ -5,8 +5,8 @@ spring:
     consul:
       host: localhost
       port: 8500
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: admin
-    password: 123456
+  # rabbitmq:
+  #   host: localhost
+  #   port: 5672
+  #   username: admin
+  #   password: 123456
