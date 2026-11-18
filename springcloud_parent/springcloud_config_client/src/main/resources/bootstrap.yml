@@ -9,10 +9,10 @@ spring:
       # 指定从仓库的哪个分支拉取配置
       label: master
       # 指定拉取配置文件的名称
-      name: client
+      name: config-client
       # 指定拉取配置文件的环境
       profile: dev
-      # fail-fast: true
+      fail-fast: true
 
 management:
   endpoints:
