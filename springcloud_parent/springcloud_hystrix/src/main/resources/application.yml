@@ -1,0 +1,11 @@
+server:
+  port: 8990
+
+spring:
+  application:
+    name: hystrix
+  cloud:
+    consul:
+      # 注册到 Consul Server 上
+      host: localhost
+      port: 8500

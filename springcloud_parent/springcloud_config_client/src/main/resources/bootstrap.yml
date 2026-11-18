@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        # 是否通过服务发现寻找 Config Server
+        enabled: true
+        # Config Server 的服务 ID
+        service-id: config-server
+      # 指定从仓库的哪个分支拉取配置
+      label: master
+      # 指定拉取配置文件的名称
+      name: client
+      # 指定拉取配置文件的环境
+      profile: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        # 暴露配置刷新、健康检查等 Web 管理端点
+        include: refresh,health,info

@@ -1,0 +1,34 @@
+server:
+  port: 7878
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+    config:
+      server:
+        git:
+          # 指定仓库的 URL
+          uri: https://github.com/0richalcos/SpringCloud.git
+          # 指定访问的分支
+          default-label: master
+          # 检索路径
+          search-paths: /springcloud_parent/springcloud_config_server/src/main/resources/config
+          # 私有仓库访问用户名
+          # username:
+          # 私有仓库访问密码
+          # password:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: 123456
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

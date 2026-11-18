@@ -1,0 +1,16 @@
+server:
+  port: 8991
+
+spring:
+  application:
+    name: openfeign-hystrix
+  cloud:
+    consul:
+      # 注册到 Consul Server
+      port: 8500
+      host: localhost
+
+feign:
+  hystrix:
+    # 开启 OpenFeign 支持服务降级
+    enabled: true

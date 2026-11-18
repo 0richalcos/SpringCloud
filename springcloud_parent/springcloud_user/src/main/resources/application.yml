@@ -1,0 +1,15 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: user
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+
+order:
+  ribbon:
+    # 修改用户服务调用订单服务默认负载均衡策略，使用随机策略
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
