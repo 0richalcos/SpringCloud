@@ -12,6 +12,7 @@ spring:
       name: client
       # 指定拉取配置文件的环境
       profile: dev
+      fail-fast: true
 
 management:
   endpoints:
