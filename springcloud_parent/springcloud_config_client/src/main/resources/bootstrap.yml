@@ -12,6 +12,7 @@ spring:
       name: config-client
       # 指定拉取配置文件的环境
       profile: dev
+      # 开启连接远程服务失败报错
       fail-fast: true
 
 management:
